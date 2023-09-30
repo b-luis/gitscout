@@ -1,0 +1,54 @@
+@import "../base/variables";
+
+/*==================
+Main
+==================*/
+
+#main {
+  background-color: $background-color-main;
+  border: 1px solid $border-color-main;
+  margin: 20px 10px 0 10px;
+  border-radius: 5px 5px 0 0;
+}
+
+#main--follow-count-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+#main--follow-count {
+  background: #0d1117;
+}
+
+#main--user-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #161b22;
+}
+
+#main--follow-count,
+#main--user-profile {
+  padding: 2em 0;
+}
+
+@media (width >= 640px) {
+  #main--follow-count,
+  #main--user-profile {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  #main {
+    margin-top: 50px;
+  }
+}
+
+@media (width > 1536px) {
+  #main {
+    margin: 0 auto;
+    width: 70%;
+    margin-top: 10em;
+  }
+}
