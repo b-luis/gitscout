@@ -18,3 +18,9 @@ export async function getFollowing(username) {
   );
   return res.data;
 }
+
+export async function getRepo(username) {
+  const res = await axios.get(`
+  https://api.github.com/users/${username}/repos`);
+  return res.data;
+}
