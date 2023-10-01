@@ -21,7 +21,7 @@ const Repository = () => {
   });
 
   if (error) return <p>{error.message}</p>;
-  if (!shouldFetchData) return <Search text={"No following found."} />;
+  if (!shouldFetchData) return <Search text={"No repository found."} />;
   if (isLoading) return <Loader />;
 
   return (
