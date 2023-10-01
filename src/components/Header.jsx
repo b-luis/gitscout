@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, Link } from "react-router-dom";
 import { DiGithubAlt } from "react-icons/di";
 
 const Header = () => {
@@ -8,10 +8,12 @@ const Header = () => {
 
   return (
     <header id="header">
-      <div id="header--title">
-        <DiGithubAlt id="header__logo" />
-        <h2 id="header__name">GitHub User Searcher</h2>
-      </div>
+      <Link to="/" className="header--link">
+        <div id="header--title">
+          <DiGithubAlt id="header__logo" />
+          <h2 id="header__name">GitHub User Searcher</h2>
+        </div>
+      </Link>
       <div id="header--search">
         <input
           type="text"
