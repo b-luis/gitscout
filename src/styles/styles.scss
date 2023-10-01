@@ -7,3 +7,10 @@
 @import "./partials/components/header";
 @import "./partials/components/toolbar";
 @import "./partials/components/main";
+@import "./partials/components/loader";
+@import "./partials/components/profile";
+
+// Routes
+@import "./partials/routes/search";
+@import "./partials/routes/user";
+@import "./partials/routes/repo";

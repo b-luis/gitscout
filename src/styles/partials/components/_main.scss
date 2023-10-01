@@ -13,11 +13,29 @@ Main
 
 #main--follow-count-wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 #main--follow-count {
-  background: #0d1117;
+  background: $background-color-url;
+
+  .main--navlinks {
+    color: $orange;
+    border: 1px solid $border-color-main;
+  }
+
+  .active {
+    color: #684665;
+    background: $orange;
+  }
+
+  .main--navlinks,
+  .active {
+    margin-right: 12px;
+    text-decoration: none;
+    padding: 0.1rem 0.8rem 0.5rem 0.8rem;
+    border-radius: 0 0 5px 5px;
+  }
 }
 
 #main--user-profile {
@@ -29,7 +47,22 @@ Main
 
 #main--follow-count,
 #main--user-profile {
-  padding: 2em 0;
+  padding: 0.1rem 0.5rem 2rem 0.2rem;
+}
+
+#main--follow-count {
+  font-size: 0.6rem;
+}
+
+#following-followers-wrapper {
+  display: flex;
+  // justify-content: space-around;
+  flex-wrap: wrap;
+
+  gap: 1em;
+  margin-top: 12px;
+  max-height: 250px;
+  overflow-y: scroll;
 }
 
 @media (width >= 640px) {
@@ -37,11 +70,39 @@ Main
   #main--user-profile {
     width: 50%;
   }
+
+  #following-followers-wrapper {
+    max-height: 500px;
+    margin-top: 2em;
+  }
+
+  #main--follow-count-wrapper {
+    flex-direction: row;
+  }
+
+  #main--follow-count {
+    font-size: 0.9rem;
+  }
 }
 
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
   #main {
     margin-top: 50px;
+  }
+  #main--follow-count {
+    font-size: 1rem;
+  }
+
+  #main--follow-count,
+  #main--user-profile {
+    padding: 0.1rem 0.5rem 2rem 1rem;
+  }
+}
+
+@media (width >= 1280px) {
+  #following-followers-wrapper {
+    justify-content: start;
+    max-height: 560px;
   }
 }
 
@@ -50,5 +111,11 @@ Main
     margin: 0 auto;
     width: 70%;
     margin-top: 10em;
+    height: 730px;
+  }
+
+  #following-followers-wrapper,
+  #main--follow-count {
+    height: 660px;
   }
 }
